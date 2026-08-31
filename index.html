@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nexora AI — The Next Gen of AI</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #080b12;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    border-bottom: 1px solid #202633;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #6c63ff;
+}
+
+nav a {
+    color: #cbd0dc;
+    text-decoration: none;
+    margin-left: 25px;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px 70px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #363d50;
+    border-radius: 30px;
+    color: #9da5ff;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.gradient {
+    background: linear-gradient(90deg, #7c6cff, #4ddcff);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    color: #aeb5c4;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.buttons {
+    margin-top: 35px;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 12px;
+    padding: 15px 25px;
+}
+
+.primary {
+    background: #6c63ff;
+    color: white;
+    margin-right: 10px;
+}
+
+.secondary {
+    background: #171c27;
+    color: white;
+    border: 1px solid #303747;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1050px;
+    margin: 20px auto 80px;
+    padding: 20px;
+}
+
+.card {
+    background: #111620;
+    border: 1px solid #252c3a;
+    border-radius: 18px;
+    padding: 30px;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+}
+
+.card p {
+    color: #9da5b5;
+    line-height: 1.5;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+.chat {
+    display: none;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.chatbox {
+    background: #111620;
+    border: 1px solid #292f3d;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.messages {
+    min-height: 300px;
+    padding: 15px;
+}
+
+.message {
+    background: #1b2130;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #303747;
+    background: #080b12;
+    color: white;
+    outline: none;
+}
+
+footer {
+    text-align: center;
+    color: #70798a;
+    padding: 30px;
+    border-top: 1px solid #202633;
+}
+
+@media (max-width: 700px) {
+
+    nav {
+        display: none;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 70px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        Nexora<span>AI</span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+    </nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+    <div class="badge">
+        ✦ The future of artificial intelligence
+    </div>
+
+    <h1>
+        Meet <span class="gradient">Nexora AI</span>
+    </h1>
+
+    <p>
+        Your intelligent AI assistant for questions,
+        ideas, learning, creativity and much more.
+    </p>
+
+    <div class="buttons">
+
+        <button class="primary" onclick="openChat()">
+            Start Chatting →
+        </button>
+
+        <button class="secondary" onclick="scrollToFeatures()">
+            Explore Nexora
+        </button>
+
+    </div>
+
+</section>
+
+
+<section class="features" id="features">
+
+    <div class="card">
+
+        <div class="icon">🧠</div>
+
+        <h3>Smart AI</h3>
+
+        <p>
+            Ask questions and get intelligent answers
+            through the Nexora AI experience.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icon">⚡</div>
+
+        <h3>Fast</h3>
+
+        <p>
+            A clean and fast interface designed
+            for everyday AI conversations.
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <div class="icon">🔒</div>
+
+        <h3>Built for You</h3>
+
+        <p>
+            Your future AI workspace with accounts,
+            history, settings and personalized features.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="chat" id="chat">
+
+    <h2 style="margin-bottom:20px;">
+        Nexora AI Chat 🤖
+    </h2>
+
+    <div class="chatbox">
+
+        <div class="messages" id="messages">
+
+            <div class="message">
+                👋 Hello! I'm Nexora AI.
+                How can I help you?
+            </div>
+
+        </div>
+
+
+        <div class="input-area">
+
+            <input
+                id="userInput"
+                type="text"
+                placeholder="Ask Nexora anything..."
+                onkeydown="if(event.key==='Enter') sendMessage()"
+            >
+
+            <button class="primary" onclick="sendMessage()">
+                Send
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 Nexora AI — The Next Gen of AI.
+
+</footer>
+
+
+<script>
+
+function openChat() {
+
+    document.getElementById("chat").style.display = "block";
+
+    document.getElementById("chat").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+function scrollToFeatures() {
+
+    document.getElementById("features").scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+function sendMessage() {
+
+    const input = document.getElementById("userInput");
+
+    const messages = document.getElementById("messages");
+
+    const text = input.value.trim();
+
+    if (!text) return;
+
+
+    const userMessage = document.createElement("div");
+
+    userMessage.className = "message";
+
+    userMessage.innerHTML = "🧑 " + text;
+
+    messages.appendChild(userMessage);
+
+
+    input.value = "";
+
+
+    setTimeout(function() {
+
+        const aiMessage = document.createElement("div");
+
+        aiMessage.className = "message";
+
+        aiMessage.innerHTML =
+            "🤖 I'm currently running in demo mode. " +
+            "Soon I'll be connected to the real Nexora AI engine!";
+
+        messages.appendChild(aiMessage);
+
+    }, 600);
+
+}
+
+</script>
+
+</body>
+</html>
